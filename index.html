@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div id ="root"></div>
+</body>
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+
+    const root = document.getElementById("root");
+    // const button = React.createElement("button",{onClick :()=>console.log("clicksss")},"click mee!!");
+    // const button =  (<button id="btn" onClick= {() => console.log("clickhere!!!")}>clickme!!!</button>);
+    // const button = () => (
+    //        <button id="btn" onClick= {() => console.log("clickhere!!!")}>clickme!!!</button>);
+    function Button (){
+        return <button id="btn" onClick= {() => console.log("clickhere!!!")}>clickme!!!</button>
+    };
+    const Title= () =>
+        (<h1 onMouseEnter = { () => console.log("mouseEnter!!!") }>hihihi</h1>);
+    const Container = () =>
+        (<div>
+            <Title/>
+            <Button/>
+            </div>);
+   ReactDOM.render(<Container/>, root);
+    // const Container = React.createElement("div", {} , [Title, Button])
+    // const Container = 
+    //     (<div>
+    //         <Title/>
+    //         <Button/>
+    //         </div>);
+    // ReactDOM.render(Container, root);
+
+</script>
+</html>
